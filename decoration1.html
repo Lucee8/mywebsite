@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chaitanya Beach Resort - Celebration Decorations</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>Chaitanya <span>Celebrations</span></h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#hero" class="active">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#booking">Book Now</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="container">
+            <h2>Make Your Special Day Magical</h2>
+            <p>Transform your celebrations at Chaitanya Beach Resort with our exclusive decoration services for birthdays, anniversaries, and romantic dinners by the beach.</p>
+            <a href="#booking" class="btn">Book now</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-title" >
+                <h2>Our Services</h2>
+                <p>Creating unforgettable moments with stunning decorations</p>
+            </div>
+            <div class="service-cards">
+                <div class="service-card">
+                    <img src="images1\Ace Birthday.jpeg" alt="Birthday Decoration">
+                    <div class="card-content">
+                        <h3>🎂 Birthday Decorations</h3>
+                        <p>Make your birthday special with our customized decoration packages including balloons, flowers, Cake and personalized themes that create magical memories.</p>
+                        <div class="price">Starts at ₹1,600</div>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="images1\mykonosAnniversary.JPEG" alt="Anniversary Decoration">
+                    <div class="card-content">
+                        <h3>💑 Anniversary Decorations</h3>
+                        <p>Celebrate your special milestone with elegant decorations designed to create romantic memories that last forever with rose petals and ambient lighting.</p>
+                        <div class="price">Starts at ₹1,600</div>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="images1\candle2.jpeg" alt="Candle Light Dinner">
+                    <div class="card-content">
+                        <h3>🕯️ Candle Light Dinner</h3>
+                        <p>Enjoy a romantic candle light dinner with your loved one by the beach with personalized service, beautiful ambiance and ocean views.</p>
+                        <div class="price">Starts at ₹850</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Decoration Gallery</h2>
+                <p>Browse through our stunning decoration portfolios</p>
+            </div>
+            <div class="gallery-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="birthday">Birthday</button>
+                <button class="filter-btn" data-filter="anniversary">Anniversary</button>
+                <button class="filter-btn" data-filter="dinner">Candle Light Dinner</button>
+            </div>
+
+            <!-- Carousel Container (hidden by default) -->
+            <div class="carousel-container" id="carouselContainer" style="display: none;">
+                <div class="carousel-wrapper" id="carouselWrapper">
+                    <!-- Slides will be dynamically added here -->
+                </div>
+                <button class="carousel-nav carousel-prev" id="prevBtn">‹</button>
+                <button class="carousel-nav carousel-next" id="nextBtn">›</button>
+                <div class="carousel-indicators" id="indicators"></div>
+            </div>
+
+            <!-- Gallery Grid (shown when "All" is selected) -->
+            <div class="gallery-grid" id="galleryGrid">
+                <div class="gallery-item" data-category="birthday">
+                    <img src="images1\Birthday Mykonos 1.jpeg" alt="Birthday Decoration 1">
+                    <div class="gallery-item-overlay">
+                        <h4>Birthday Celebration at Mykonos</h4>
+                    </div>  
+                </div>
+                    <!-- <div class="gallery-item" data-category="birthday">
+                        <img src="images\mykonos2.jpeg" alt="Birthday Decoration 2">
+                        <div class="gallery-item-overlay">
+                            <h4>Birthday Setup at Mykonos</h4>
+                        </div>
+                    </div> -->
+                <div class="gallery-item" data-category="anniversary">
+                    <img src="images1\Mykonos Anniversary.jpeg" alt="Anniversary Decoration 1">
+                    <div class="gallery-item-overlay">
+                        <h4>Anniversary Decoration at Mykonos</h4>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="anniversary">
+                    <img src="images1\mykonosAnniversary.JPEG" alt="Anniversary Decoration 2">
+                    <div class="gallery-item-overlay">
+                        <h4>Anniversary Setup at Mykonos</h4>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="dinner">
+                    <img src="images1\Birthday Woodpekar.jpeg" alt="Candle Light Dinner 1">
+                    <div class="gallery-item-overlay">
+                        <h4>Birthday Celebration at Woodpekar</h4>
+                    </div>
+                </div>
+                <!-- <div class="gallery-item" data-category="dinner">
+                    <img src="images\woodpekar.jpeg" alt="Candle Light Dinner 2">
+                    <div class="gallery-item-overlay">
+                        <h4>Birthday Celebration at Woodpekar</h4>
+                    </div>
+                </div> -->
+                <div class="gallery-item" data-category="birthday">
+                    <img src="images1/candle1.jpeg" alt="Birthday Decoration 3">
+                    <div class="gallery-item-overlay">
+                        <h4>Poolside Candle Light Dinner</h4>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="anniversary">
+                    <img src="images1\candle2.jpeg" alt="Anniversary Decoration 3">
+                    <div class="gallery-item-overlay">
+                        <h4>Rose Petal Candle Light Dinner Setup</h4>
+                    </div>
+                </div>
+                    <div class="gallery-item" data-category="dinner">
+                    <img src="images1\Birthday3.jfif" alt="Candle Light Dinner 2">
+                    <div class="gallery-item-overlay">
+                        <h4>Birthday Celebration at Mykonos</h4>
+                    </div>
+                </div>
+                    <div class="gallery-item" data-category="dinner">
+                    <img src="images1\Anniversary1.jfif" alt="Candle Light Dinner 2">
+                    <div class="gallery-item-overlay">
+                        <h4>Anniversary Celebration at Mykonos</h4>
+                    </div>
+                </div>
+                    <div class="gallery-item" data-category="dinner">
+                    <img src="images1\Anniversary2.jfif" alt="Candle Light Dinner 2">
+                    <div class="gallery-item-overlay">
+                        <h4>Anniversary Celebration at Mykonos</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Form Section -->
+    <section class="booking-section" id="booking">
+        <div class="container">
+            <div class="booking-form-container">
+                <div class="section-title" >
+                <h2>Book Your Decoration</h2>
+             </div>
+                <p class="subtitle">Fill in the details and we'll create magic for your special day</p>
+                
+                <form id="bookingForm">
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
+                        <div class="form-group">
+                            <label for="fullName">👤 Full Name *</label>
+                            <input type="text" class="form-control" id="fullName" placeholder="Enter your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactNumber">📱 Contact Number *</label>
+                            <input type="tel" class="form-control" id="contactNumber" placeholder="10-digit mobile number" pattern="[0-9]{10}" required>
+                        </div>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
+                        <div class="form-group">
+                            <label for="eventType">🎊 Event Type *</label>
+                            <select class="form-select" id="eventType" required>
+                                <option value="">Select Event Type</option>
+                                <option value="Birthday Party">Birthday</option>
+                                <option value="Anniversary">Anniversary</option>
+                                <option value="Candle Light Dinner">Candle Light Dinner</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="eventDate">📅 Date of Event *</label>
+                            <input type="date" class="form-control" id="eventDate" required>
+                        </div>
+                    </div>
+
+                    <!-- <div class="form-group">
+                        <label for="location">📍 Event Location *</label>
+                        <input type="text" class="form-control" id="location" placeholder="Cottage name or venue details" required>
+                    </div> -->
+
+                    <div class="form-group">
+                        <label for="specialRequirements">💬 Special Requirements</label>
+                        <textarea class="form-control" id="specialRequirements" rows="4" placeholder="Tell us about your decoration preferences, theme ideas, color schemes, or any special requests..."></textarea>
+                    </div>
+
+                    <!-- <div class="form-group">
+                        <label for="budget">💰 Estimated Budget (Optional)</label>
+                        <select class="form-select" id="budget">
+                            <option value="">Select Budget Range</option>
+                            <option value="Under ₹2,000">Under ₹2,000</option>
+                            <option value="₹2,000 - ₹5,000">₹2,000 - ₹5,000</option>
+                            <option value="₹5,000 - ₹10,000">₹5,000 - ₹10,000</option>
+                            <option value="₹10,000 - ₹20,000">₹10,000 - ₹20,000</option>
+                            <option value="Above ₹20,000">Above ₹20,000</option>
+                        </select>
+                    </div> -->
+
+                    <button type="submit" class="submit-btn">
+                        <svg width="24" height="24" fill="white" viewBox="0 0 24 24">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                        </svg>
+                        Send Booking Enquiry via WhatsApp
+                    </button>
+
+                    <div class="success-message" id="successMessage">
+                        <svg width="48" height="48" fill="white" viewBox="0 0 24 24" style="margin-bottom: 10px;">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                        <h4 style="margin: 10px 0;">Redirecting to WhatsApp...</h4>
+                        <p style="margin: 0; font-size: 0.95rem;">Your booking details are being sent</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Create Unforgettable Memories?</h2>
+            <p>Contact us now to book your celebration decorations. Our team will work with you to create the perfect setup for your special occasion at Chaitanya Beach Resort.</p>
+            <a href="#booking" class="btn btn-white">Book Your Decoration Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>About Us</h3>
+                    <p>Chaitanya Beach Resort offers exclusive decoration services for special occasions. We transform spaces into magical settings for birthdays, anniversaries, and romantic dinners by the beautiful Tarkarli beach.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#booking">Book Now</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <div class="contact-info">
+                        <div>
+                            <span>📍 Address:</span>
+                            <p>Chaitanya Beach Resort, House No. 05, Pednekar Wadi, Near MTDC, Devbag, Malvan - 416606</p>
+                        </div>
+                        <div>
+                            <span>📞 Phone:</span>
+                            <p>+91 8378991750</p>
+                        </div>
+                        <div>
+                            <span>✉️ Email:</span>
+                            <p>chaitanyabeachresort@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://wa.me/918378991750" target="_blank">WhatsApp</a>
+                        <a href="https://www.instagram.com/mykonos_cottage_tarkarli" target="_blank">Instagram</a>
+                        <a href="https://m.facebook.com/profile.php?id=100076199050473" target="_blank">Facebook</a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Chaitanya Beach Resort. All Rights Reserved. | Making celebrations memorable ✨</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/918378991750" target="_blank" class="wa-float-btn" title="Chat on WhatsApp">
+        <svg width="35" height="35" fill="white" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </a>
+
+    <script>
+        // Set minimum date to today for event date
+        const dateInput = document.getElementById('eventDate');
+        const today = new Date().toISOString().split('T')[0];
+        dateInput.setAttribute('min', today);
+
+        // Form Submission with WhatsApp Integration
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const fullName = document.getElementById('fullName').value;
+            const contactNumber = document.getElementById('contactNumber').value;
+            const eventType = document.getElementById('eventType').value;
+            const eventDate = document.getElementById('eventDate').value;
+            // const location = document.getElementById('location').value;
+            const specialRequirements = document.getElementById('specialRequirements').value;
+            // const budget = document.getElementById('budget').value;
+
+            // Format the date
+            const formattedDate = new Date(eventDate).toLocaleDateString('en-IN', {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+
+            // Create WhatsApp message
+            let message = `🎉 *NEW DECORATION BOOKING ENQUIRY* 🎉\n\n`;
+            message += `👤 *Name:* ${fullName}\n`;
+            message += `📱 *Contact:* ${contactNumber}\n`;
+            message += `🎊 *Event Type:* ${eventType}\n`;
+            message += `📅 *Event Date:* ${formattedDate}\n`;
+            // message += `📍 *Location:* ${location}\n`;
+            
+            // if (budget) {
+            //     message += `💰 *Budget:* ${budget}\n`;
+            // }
+            
+            if (specialRequirements) {
+                message += `\n📝 *Special Requirements:*\n${specialRequirements}\n`;
+            }
+            
+            message += `\n✨ _Looking forward to making this event special at Chaitanya Beach Resort!_`;
+
+            // Encode message for URL
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappNumber = '918378991750';
+            const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+            // Show success message
+            document.getElementById('successMessage').style.display = 'block';
+
+            // Redirect to WhatsApp after 1.5 seconds
+            setTimeout(() => {
+                window.open(whatsappURL, '_blank');
+                // Reset form
+                document.getElementById('bookingForm').reset();
+                // Hide success message after 3 seconds
+                setTimeout(() => {
+                    document.getElementById('successMessage').style.display = 'none';
+                }, 3000);
+            }, 1500);
+        });
+
+        // Gallery Filter Functionality with Carousel
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const galleryGrid = document.getElementById('galleryGrid');
+            const carouselContainer = document.getElementById('carouselContainer');
+            const carouselWrapper = document.getElementById('carouselWrapper');
+            const indicatorsContainer = document.getElementById('indicators');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            
+            let currentSlide = 0;
+            let totalSlides = 0;
+            let autoSlideInterval;
+
+// Gallery data
+const galleryData = {
+    birthday: [
+        { img: 'images1/Ace Birthday.jpeg', title: 'Birthday Celebration at Ace' },
+        { img: 'images1/Birthday Mykonos 1.jpeg', title: 'Birthday Celebration at Mykonos' },
+        { img: 'images1/Birthday Woodpekar.jpeg', title: 'Birthday Celebration at Woodpecker' }
+    ],
+    anniversary: [
+        { img: 'images1/Mykonos Anniversary.jpeg', title: 'Anniversary Decoration at Mykonos' },
+        { img: 'images1/mykonosAnniversary.JPEG', title: 'Anniversary Setup' },
+        { img: 'images1/candlelight.jpeg', title: 'Rose Petal Anniversary Dinner' }
+    ],
+    dinner: [
+        { img: 'images1/candle1.jpeg', title: 'Candle Light Dinner at Woodpekar' },
+        { img: 'images1/candle2.jpeg', title: 'Special Dinner Setup' }
+    ]
+};
+
+            function createCarousel(category) {
+                const items = galleryData[category];
+                carouselWrapper.innerHTML = '';
+                indicatorsContainer.innerHTML = '';
+                
+                items.forEach((item, index) => {
+                    // Create slide
+                    const slide = document.createElement('div');
+                    slide.className = 'carousel-slide';
+                    slide.innerHTML = `
+                        <img src="${item.img}" alt="${item.title}">
+                        <div class="carousel-caption">
+                            <h3>${item.title}</h3>
+                            <p>${item.desc}</p>
+                        </div>
+                    `;
+                    carouselWrapper.appendChild(slide);
+
+                    // Create indicator
+                    const indicator = document.createElement('div');
+                    indicator.className = 'indicator' + (index === 0 ? ' active' : '');
+                    indicator.addEventListener('click', () => goToSlide(index));
+                    indicatorsContainer.appendChild(indicator);
+                });
+
+                totalSlides = items.length;
+                currentSlide = 0;
+                updateCarousel();
+                startAutoSlide();
+            }
+
+            function goToSlide(index) {
+                currentSlide = index;
+                updateCarousel();
+            }
+
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % totalSlides;
+                updateCarousel();
+            }
+
+            function prevSlide() {
+                currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+                updateCarousel();
+            }
+
+            function updateCarousel() {
+                const offset = -currentSlide * 100;
+                carouselWrapper.style.transform = `translateX(${offset}%)`;
+                
+                // Update indicators
+                const indicators = indicatorsContainer.querySelectorAll('.indicator');
+                indicators.forEach((indicator, index) => {
+                    indicator.classList.toggle('active', index === currentSlide);
+                });
+            }
+
+            function startAutoSlide() {
+                clearInterval(autoSlideInterval);
+                autoSlideInterval = setInterval(nextSlide, 4000);
+            }
+
+            function stopAutoSlide() {
+                clearInterval(autoSlideInterval);
+            }
+
+            // Event listeners for carousel navigation
+            prevBtn.addEventListener('click', () => {
+                prevSlide();
+                stopAutoSlide();
+                startAutoSlide();
+            });
+
+            nextBtn.addEventListener('click', () => {
+                nextSlide();
+                stopAutoSlide();
+                startAutoSlide();
+            });
+
+            // Pause on hover
+            carouselContainer.addEventListener('mouseenter', stopAutoSlide);
+            carouselContainer.addEventListener('mouseleave', startAutoSlide);
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    // Get filter value
+                    const filterValue = this.getAttribute('data-filter');
+                    
+                    if (filterValue === 'all') {
+                        // Show grid, hide carousel
+                        galleryGrid.style.display = 'grid';
+                        carouselContainer.style.display = 'none';
+                        stopAutoSlide();
+                    } else {
+                        // Show carousel, hide grid
+                        galleryGrid.style.display = 'none';
+                        carouselContainer.style.display = 'block';
+                        createCarousel(filterValue);
+                    }
+                });
+            });
+            
+            // Smooth scroll for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        window.scrollTo({
+                            top: target.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Add active class to nav based on scroll position
+            window.addEventListener('scroll', function() {
+                const sections = document.querySelectorAll('section');
+                const navLinks = document.querySelectorAll('nav a');
+                
+                let current = '';
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - 100;
+                    const sectionHeight = section.clientHeight;
+                    
+                    if (window.pageYOffset >= sectionTop && window.pageYOffset < sectionTop + sectionHeight) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (current && link.getAttribute('href') === `#${current}`) {
+                        link.classList.add('active');
+                    } else if (!current && link.getAttribute('href') === '#') {
+                        link.classList.add('active');
+                    }
+                });
+            });
+
+            // Add scroll animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Observe elements for animation
+            document.querySelectorAll('.service-card, .gallery-item').forEach(item => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(30px)';
+                item.style.transition = 'all 0.6s ease';
+                observer.observe(item);
+            });
+        });
+    </script>
+    
+</body>
+</html>
